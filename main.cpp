@@ -20,10 +20,10 @@ int main(){
         
     }
     
-    cout<<"commit 1";
+    cout<<"commit 1"<<endl;
 
-    Jugadores jug(numpla, pdrmazo);
-    cout<<"Commit 2";
+    Jugadores jug(numpla, &m);
+    cout<<"Commit 2"<<endl;
     Jugadores* pdrjug=&jug;
     Tablero tab;
     Tablero* pdrtab=&tab;

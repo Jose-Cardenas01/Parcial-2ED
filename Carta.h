@@ -5,9 +5,9 @@ using namespace std;
 
 class Carta{
     public:
-        int est;
-		int poder;
-		char color;
+        int est=0;
+		int poder=0;
+		char color='a';
         Carta();
 };
 
