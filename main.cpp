@@ -22,7 +22,7 @@ int main(){
     
     cout<<"commit 1"<<endl;
 
-    Jugadores jug(numpla, &m);
+    Jugadores jug(numpla, pdrmazo);
     cout<<"Commit 2"<<endl;
     Jugadores* pdrjug=&jug;
     Tablero tab;

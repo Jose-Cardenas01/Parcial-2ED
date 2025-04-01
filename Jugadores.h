@@ -1,6 +1,7 @@
 #ifndef JUGADORES
 #define JUGADORES
 #include "./Mazo.h"
+#include "./Carta.h"
 #include <vector>
 
 using namespace std;
@@ -9,7 +10,7 @@ class Jugadores{
 	public:
 		//Mazo m;
 		//Mazo* pdr=&m;
-		int id=0, numpla=0, puntos=0;
+		int id=0, numpla, puntos=0;
 		int numcartas=1;
 		vector<Carta> baraja;//baraja para cada jugador
 		Jugadores();//tipo de variable para almacenar los jugadores

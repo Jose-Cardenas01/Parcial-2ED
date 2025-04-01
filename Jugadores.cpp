@@ -1,5 +1,6 @@
 #include "./Jugadores.h"
 #include <iostream>
+#include <stdexcept> // Para std::runtime_error
 
 using namespace std;
 
@@ -12,12 +13,14 @@ Jugadores::Jugadores(){//tipo de variable
 
 Jugadores::Jugadores(int numpla, Mazo* pdr){
 	
-	cout<<"jugadores 1";
-	this->numpla=numpla;
-	numcartas=(36/numpla);//define las cartas que le tocan a cada jugador
-	baraja.resize(numcartas);
-	players.resize(numpla);
+	cout<<"jugadores 1"<<endl;
+	baraja.clear();
+	baraja.shrink_to_fit();	
+	this->numpla=numpla;		
+	numcartas=(36/numpla);//define las cartas que le tocan a cada jugador	
+	baraja.resize(numcartas);		
 	cout<<"jugadores 2";
+	players.resize(numpla);
 	
 	for (int i=0;i<numpla;i++){//da valores a cada posicion
 	
@@ -25,11 +28,11 @@ Jugadores::Jugadores(int numpla, Mazo* pdr){
 		Jugadores jugador;
 		jugador.id=(i+1);
 		jugador.puntos=0;
-		jugador.baraja=pdr->Repartir(18/*numcartas*/);//se le reparte una baraja a cada jugador (Repartir retorna una baraja)
+		jugador.baraja=pdr->Repartir(numcartas);//se le reparte una baraja a cada jugador (Repartir retorna una baraja)
 		players[i]=jugador;//se agrega el jugador con sus atributos al vector players
 		cout<<"jugadores 4";
 		
-	}
+	}   
 }
 
 
